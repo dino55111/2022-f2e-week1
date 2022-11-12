@@ -1,12 +1,12 @@
 <script setup>
 import awardsBlock from "./components/awardsBlock.vue";
-import sponsorBlock from "./components/sponsorBlock.vue";
+import sponsorsBlock from "./components/sponsorsBlock.vue";
 </script>
 
 <template>
   <div>
     <awardsBlock></awardsBlock>
-    <sponsorBlock></sponsorBlock>
+    <sponsorsBlock></sponsorsBlock>
   </div>
 </template>
 

@@ -1,9 +1,9 @@
 <script setup></script>
 
 <template>
-  <section class="sponsorBlock bg-hex-cfa575 py-60px">
+  <section class="sponsorsBlock bg-hex-cfa575 py-60px">
     <h2
-      class="sponsorBlock__title text-white text-center font-900 text-24px md:text-36px"
+      class="sponsorsBlock__title text-white text-center font-900 text-24px md:text-36px"
     >
       本次活動贊助單位
     </h2>
@@ -50,7 +50,7 @@
 
 <style lang="scss">
 @media (min-width: 768px) {
-  .sponsorBlock {
+  .sponsorsBlock {
     &__title {
       position: relative;
       &::before,
