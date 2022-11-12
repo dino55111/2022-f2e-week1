@@ -3,12 +3,14 @@
 <template>
   <section class="awardsBlock bg-hex-f1ede9 pt-30px pb-60px">
     <h2 class="text-hex-4e7b57 font-900 text-24px md:text-60px">
-      <div>區區修煉已經無法滿足了嗎？還有比賽等著你！</div>
+      <div class="whitespace-nowrap">
+        區區修煉已經無法滿足了嗎？還有比賽等著你！
+      </div>
     </h2>
 
-    <div class="mt-60px">
+    <div class="awardsBlock__leftInfo mt-80px md:mt-60px">
       <div
-        class="bg-white rounded-25px max-w-1000px w-[80%] mx-auto p-24px md:w-[50%]"
+        class="awardsBlock__dot bg-white rounded-25px max-w-1000px w-[80%] mx-auto p-24px md:w-[50%]"
       >
         <h3 class="text-hex-4e7b57 font-900 text-16px text-center md:text-24px">
           評審機制
@@ -33,9 +35,9 @@
       </div>
     </div>
 
-    <div class="mt-60px">
+    <div class="awardsBlock__rightInfo mt-80px md:mt-60px">
       <div
-        class="bg-white rounded-25px max-w-1000px w-[80%] mx-auto p-24px md:w-[50%]"
+        class="awardsBlock__dot bg-white rounded-25px max-w-1000px w-[80%] mx-auto p-24px md:w-[50%]"
       >
         <h3 class="text-hex-4e7b57 font-900 text-16px text-center md:text-24px">
           比賽獎項
@@ -54,9 +56,11 @@
       </div>
     </div>
 
-    <div class="flex justify-center items-center mt-80px">
+    <div
+      class="awardsBlock__dot flex justify-center items-center mt-120px md:mt-80px"
+    >
       <button
-        class="bg-hex-4e7b57 px-60px py-20px rounded-10px text-24px text-white font-900 hover:bg-white hover:text-hex-4e7b57"
+        class="awardsBlock__button bg-hex-4e7b57 px-60px py-20px rounded-10px text-24px text-white font-900 hover:bg-white hover:text-hex-4e7b57"
       >
         立即報名!
       </button>
@@ -64,4 +68,54 @@
   </section>
 </template>
 
-<style></style>
+<style lang="scss">
+.awardsBlock {
+  &__leftInfo {
+    background: linear-gradient(90deg, #4e7b57 50%, transparent 50%);
+  }
+
+  &__rightInfo {
+    background: linear-gradient(90deg, transparent 50%, #4e7b57 50%);
+  }
+
+  &__dot {
+    position: relative;
+    &::before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 20px;
+      height: 20px;
+      background-color: white;
+      border-radius: 100%;
+      top: -40px;
+      left: calc(50% - 10px);
+    }
+  }
+
+  &__button {
+    position: relative;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 100%;
+      width: 10px;
+      background-color: #69a575;
+      border-radius: 5px;
+      top: 0;
+    }
+
+    &::before {
+      left: -50px;
+      transform: rotate(-20deg);
+    }
+
+    &::after {
+      right: -50px;
+      transform: rotate(20deg);
+    }
+  }
+}
+</style>
